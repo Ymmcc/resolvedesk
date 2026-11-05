@@ -1,0 +1,38 @@
+test_fractional_timeout_environment (tests.test_platform.ConfigurationTests.test_fractional_timeout_environment) ... ok
+test_live_adapter_three_agents_and_denied_tool (tests.test_platform.LiveContractTests.test_live_adapter_three_agents_and_denied_tool) ... ok
+test_missing_live_config_fails_loudly (tests.test_platform.LiveContractTests.test_missing_live_config_fails_loudly) ... ok
+test_admission_limit_returns_429 (tests.test_platform.PlatformTests.test_admission_limit_returns_429) ... ok
+test_authentication_required (tests.test_platform.PlatformTests.test_authentication_required) ... ok
+test_clarification_skips_investigation (tests.test_platform.PlatformTests.test_clarification_skips_investigation) ... ok
+test_concurrent_escalation_creates_one_ticket (tests.test_platform.PlatformTests.test_concurrent_escalation_creates_one_ticket) ... ok
+test_concurrent_updates_do_not_overwrite (tests.test_platform.PlatformTests.test_concurrent_updates_do_not_overwrite) ... ok
+test_customer_cannot_read_other_ticket_or_run (tests.test_platform.PlatformTests.test_customer_cannot_read_other_ticket_or_run) ... ok
+test_customer_scope_is_server_enforced (tests.test_platform.PlatformTests.test_customer_scope_is_server_enforced) ... ok
+test_embedding_failure_does_not_publish_partial_document (tests.test_platform.PlatformTests.test_embedding_failure_does_not_publish_partial_document) ... ok
+test_extra_parameters_and_large_payload_rejected (tests.test_platform.PlatformTests.test_extra_parameters_and_large_payload_rejected) ... ok
+test_followup_context_access (tests.test_platform.PlatformTests.test_followup_context_access) ... ok
+test_foreign_task_does_not_leak (tests.test_platform.PlatformTests.test_foreign_task_does_not_leak) ... ok
+test_idempotency_key_conflict (tests.test_platform.PlatformTests.test_idempotency_key_conflict) ... ok
+test_idempotent_escalation_and_unique_run (tests.test_platform.PlatformTests.test_idempotent_escalation_and_unique_run) ... ok
+test_import_advice_matches_version (tests.test_platform.PlatformTests.test_import_advice_matches_version) ... ok
+test_invalid_citation_is_blocked (tests.test_platform.PlatformTests.test_invalid_citation_is_blocked) ... ok
+test_knowledge_approval_scope_and_reopen_withdrawal (tests.test_platform.PlatformTests.test_knowledge_approval_scope_and_reopen_withdrawal) ... ok
+test_optimistic_revision_conflict (tests.test_platform.PlatformTests.test_optimistic_revision_conflict) ... ok
+test_permission_question_does_not_route_to_export (tests.test_platform.PlatformTests.test_permission_question_does_not_route_to_export) ... ok
+test_problem_fix_requires_customer_confirmation (tests.test_platform.PlatformTests.test_problem_fix_requires_customer_confirmation) ... ok
+test_roles_and_state_transitions (tests.test_platform.PlatformTests.test_roles_and_state_transitions) ... ok
+test_shared_document_indexed_atomically (tests.test_platform.PlatformTests.test_shared_document_indexed_atomically) ... ok
+test_startup_and_seed (tests.test_platform.PlatformTests.test_startup_and_seed) ... ok
+test_three_agents_and_read_only_investigation (tests.test_platform.PlatformTests.test_three_agents_and_read_only_investigation) ... ok
+test_three_search_strategies (tests.test_platform.PlatformTests.test_three_search_strategies) ... ok
+test_total_timeout_is_persisted_and_admission_released (tests.test_platform.PlatformTests.test_total_timeout_is_persisted_and_admission_released) ... ok
+test_unresolved_ticket_cannot_create_knowledge (tests.test_platform.PlatformTests.test_unresolved_ticket_cannot_create_knowledge) ... ok
+test_version_filter_and_customer_version_lock (tests.test_platform.PlatformTests.test_version_filter_and_customer_version_lock) ... ok
+test_wrong_version_problem_rejected (tests.test_platform.PlatformTests.test_wrong_version_problem_rejected) ... ok
+test_malformed_embedding_is_rejected (tests.test_platform.ProviderFailureTests.test_malformed_embedding_is_rejected) ... ok
+test_upstream_error_does_not_expose_secrets (tests.test_platform.ProviderFailureTests.test_upstream_error_does_not_expose_secrets) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 5.410s
+
+OK

@@ -1,0 +1,39 @@
+{
+  "created_at": "2026-10-29T11:09:31+00:00",
+  "llm_model": "deepseek-v4.1-flash-1017",
+  "embedding_model": "BAAI/bge-m3",
+  "checks": {
+    "embedding_catalog": {
+      "status": 200,
+      "configured_model_present": true,
+      "embedding_candidates": [
+        "Qwen/Qwen3-VL-Embedding-8B",
+        "Qwen/Qwen3-Embedding-8B",
+        "Qwen/Qwen3-Embedding-4B",
+        "Qwen/Qwen3-Embedding-0.6B",
+        "BAAI/bge-m3",
+        "BAAI/bge-large-en-v1.5",
+        "BAAI/bge-large-zh-v1.5",
+        "Pro/BAAI/bge-m3"
+      ]
+    },
+    "embedding": {
+      "ok": true,
+      "shape": [
+        2,
+        1024
+      ],
+      "duration_ms": 1147.65
+    },
+    "structured_chat": {
+      "ok": true,
+      "output": {
+        "intent": "diagnose",
+        "module": "import",
+        "task_id": "IMP-1001",
+        "clarification": ""
+      },
+      "duration_ms": 1819.25
+    }
+  }
+}

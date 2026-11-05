@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>ResolveDesk · 售后协同工作台</title>
+  <link rel="stylesheet" href="/static/style.css?v=0.1.1">
+  <script src="/static/app.js?v=0.1.1" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳至工作区</a>
+  <aside id="sidebar">
+    <a class="brand" href="#reception" aria-label="ResolveDesk 首页"><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M5 6h13a7 7 0 0 1 0 14h-5l-7 5V6Z"/><path d="m11 13 3 3 6-6"/></svg><span>ResolveDesk<small>售后诊断与协同</small></span></a>
+    <div class="workspace"><span class="workspace-dot"></span>商舟订单云 <small>产品支持团队</small></div>
+    <div class="nav-caption">服务工作区</div>
+    <nav aria-label="主导航" id="nav"></nav>
+    <div class="side-bottom"><div id="mode-label">正在连接服务</div><p>客户问题 → 调查证据<br>处理跟进 → 案例沉淀</p><a href="/docs" target="_blank" rel="noopener">API 文档 ↗</a></div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar">
+      <button id="menu" class="icon-button" aria-label="展开导航" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg></button>
+      <div class="breadcrumb">商舟订单云 <span>/</span> <span id="crumb">服务接待</span></div>
+      <div class="account-controls"><label for="customer" class="sr-only">当前客户</label><select id="customer" aria-label="当前客户"></select><label for="role" class="sr-only">演示身份</label><select id="role" aria-label="演示身份"><option value="customer-a">客户 · 青禾商贸</option><option value="customer-b">客户 · 远山书店</option><option value="support">客服 · 林舟</option><option value="engineer">技术 · 陈宁</option></select><button id="credentials" class="plain">访问凭证</button></div>
+    </header>
+    <main id="main" tabindex="-1"><div class="loading">正在读取工作区…</div></main>
+    <footer class="app-footer"><span>ResolveDesk / 单产品售后协同</span><span id="footer-mode"></span></footer>
+  </div>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="token-dialog"><form id="token-form"><h2>访问凭证</h2><p class="muted">凭证仅保存在当前浏览器会话中，由服务器验证角色和客户范围。</p><label>Bearer token<input id="token-input" type="password" autocomplete="off" required></label><div class="actions"><button type="button" class="secondary" id="token-cancel">取消</button><button class="primary">连接工作区</button></div></form></dialog>
+</body>
+</html>

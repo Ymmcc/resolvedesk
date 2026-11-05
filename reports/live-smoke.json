@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-10-29T11:10:39+00:00",
+  "mode": "live",
+  "llm_model": "deepseek-v4.1-flash-1017",
+  "embedding_model": "BAAI/bge-m3",
+  "scope": "3 条自建虚构业务样例；只检查链路、适用版本、引用来源和读工具，无并发压测。",
+  "cases": [
+    {
+      "module": "import",
+      "question": "IMP-1001 提示 E2013，升级后导入失败，请根据实际任务和适用版本说明如何处理。",
+      "status": 200,
+      "duration_ms": 22788.78,
+      "run_id": "RUN-00a6ca59ea98",
+      "resolution": {
+        "answer": "根据任务查询结果，IMP-1001 当前状态为 failed，错误码 E2013，任务详情显示模板为 v1.0、错误信息为 `unknown column: order_no`、accepted_rows=0、failed_rows=36。这说明在 v2.0 环境中仍使用 v1.0 模板的 `order_no` 字段；v2.0 已将该字段更名为 `external_order_id`，旧模板不能直接使用。\n\n处理建议：\n1. 从 v2.0 订单导入页面下载 v2.0 模板，不要复用 v1.0 文件。\n2. 将原文件的 `order_no` 列映射/改名为 `external_order_id`，保留订单号原值；确认 `sku`、`quantity` 等必填列完整，`quantity` 为正整数。\n3. 使用 UTF-8 编码保存 CSV，并保持订单号、SKU 为文本格式，避免乱码或前导零丢失。\n4. 因本次 accepted_rows=0，这 36 行没有成功入库，可按新模板整批重新导入；但如果其他批次曾成功导入相同订单号，请先按 `external_order_id` 核对，避免重复订单。\n5. 建议先用少量行验证，再导入全量；如提示 E2009，请按重复订单排查，只修正失败行。\n\n本次仅依据任务和知识库给出处理建议，未执行修改、修复或工单关联。重新导入后如有新任务编号，可回传以便继续核对。",
+        "decision": "answer",
+        "citation_ids": [
+          "import-v2:0",
+          "release-v2:0",
+          "import-encoding:0"
+        ],
+        "summary": "IMP-1001 因 v1.0 旧模板 order_no 字段导致 v2.0 导入报 E2013",
+        "reproduction": "环境：青禾商贸（acme），v2.0，专业版。现象：客户反馈升级后订单导入失败，任务 IMP-1001 状态 failed，错误码 E2013，错误信息 `unknown column: order_no`，模板版本 v1.0，accepted_rows=0，failed_rows=36。已尝试操作：客户未提供具体已尝试步骤。",
+        "suggested_problem_id": null
+      },
+      "triage": {
+        "intent": "diagnose",
+        "module": "import",
+        "task_id": "IMP-1001",
+        "clarification": ""
+      },
+      "citation_ids_valid": true,
+      "correct_version": true,
+      "tool_calls": [
+        "search_cases",
+        "list_problems",
+        "search_knowledge",
+        "get_task",
+        "get_task",
+        "get_environment",
+        "search_cases",
+        "list_problems"
+      ],
+      "writes_executed": 0
+    },
+    {
+      "module": "export",
+      "question": "报表导出失败，任务 EXP-1002，E3008。请核实后帮我整理技术工单草稿。",
+      "status": 502,
+      "duration_ms": 49843.73,
+      "error": {
+        "message": "模型服务超时，请稍后重试",
+        "run_id": "RUN-327c97b17a46"
+      }
+    },
+    {
+      "module": "permission",
+      "question": "AUTH-1003 提示 E4030，为什么不能导出报表？请查询后说明处理方法，不要替我修改权限。",
+      "status": 200,
+      "duration_ms": 24817.43,
+      "run_id": "RUN-cf3380bc15e8",
+      "resolution": {
+        "answer": "查询结果：AUTH-1003 的错误码为 E4030，当前账号角色为“操作员”，且 report.export（报表导出）权限未授予。\n\n原因：v2.0 中操作员只有订单查看和导入权限；报表导出需要由本组织管理员授予分析员或管理员角色。\n\n处理方法：请联系本组织管理员，按最小必要原则为需要导出报表的账号分配分析员或管理员角色。权限调整后请重新登录，以刷新权限。客服与 AI 不能直接提升用户权限，也不会代您修改权限；在管理员完成授权前，不能确认权限已生效。\n\n如管理员调整并重新登录后仍提示 E4030，可提交技术工单，并附上 AUTH-1003、错误信息及已尝试的操作。",
+        "decision": "answer",
+        "citation_ids": [
+          "permission-v2:0",
+          "release-v2:0"
+        ],
+        "summary": "AUTH-1003 导出报表提示 E4030 的原因与处理说明",
+        "reproduction": "环境：青禾商贸，v2.0，专业版；现象：导出报表提示 E4030；工具确认：任务 AUTH-1003 状态为 failed，当前角色为 operator，report.export 权限 granted=false；复现步骤：客户未提供；已尝试操作：按客户要求仅查询并说明处理方法，未修改权限。",
+        "suggested_problem_id": null
+      },
+      "triage": {
+        "intent": "diagnose",
+        "module": "permission",
+        "task_id": "AUTH-1003",
+        "clarification": ""
+      },
+      "citation_ids_valid": true,
+      "correct_version": true,
+      "tool_calls": [
+        "search_cases",
+        "list_problems",
+        "search_knowledge",
+        "get_task"
+      ],
+      "writes_executed": 0
+    }
+  ]
+}

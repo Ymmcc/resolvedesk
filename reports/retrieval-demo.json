@@ -1,0 +1,1302 @@
+{
+  "created_at": "2026-10-29T10:32:07+00:00",
+  "mode": "demo",
+  "embedding": "hash-lexical-v1",
+  "python": "3.12.15",
+  "k": 3,
+  "queries": 24,
+  "documents": 12,
+  "chunks": 12,
+  "limitation": "人工构造的小型回归集，与文档存在用词关联，不是独立真实用户测试。demo 向量为词法哈希，不能证明语义能力。",
+  "strategies": {
+    "bm25": {
+      "hit_at_k": 0.9583333333333334,
+      "recall_at_k": 0.9583333333333334,
+      "mrr_at_k": 0.9583333333333334,
+      "wrong_version_chunks": 0,
+      "cases": [
+        {
+          "query": "E2013 旧模板订单导入失败",
+          "version": "2.0",
+          "module": "import",
+          "relevant": [
+            "import-v2"
+          ],
+          "retrieved": [
+            "import-v2",
+            "release-v2",
+            "import-encoding"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 13.64,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "升级后 order_no 字段不识别",
+          "version": "2.0",
+          "module": "import",
+          "relevant": [
+            "import-v2",
+            "release-v2"
+          ],
+          "retrieved": [
+            "import-v2",
+            "release-v2",
+            "import-quantity"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.82,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "external_order_id 应该怎么填",
+          "version": "2.0",
+          "module": "import",
+          "relevant": [
+            "import-v2"
+          ],
+          "retrieved": [
+            "import-v2",
+            "import-encoding",
+            "release-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.59,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "E2013 缺少订单号列",
+          "version": "1.0",
+          "module": "import",
+          "relevant": [
+            "import-v1"
+          ],
+          "retrieved": [
+            "import-v1",
+            "import-encoding",
+            "import-quantity"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.13,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "v1.0 单次能导入多少行",
+          "version": "1.0",
+          "module": "import",
+          "relevant": [
+            "import-v1"
+          ],
+          "retrieved": [
+            "import-v1",
+            "import-encoding",
+            "import-quantity"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.87,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "CSV 上传后中文乱码",
+          "version": "2.0",
+          "module": "import",
+          "relevant": [
+            "import-encoding"
+          ],
+          "retrieved": [
+            "import-encoding",
+            "import-v2",
+            "import-quantity"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.33,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "E2009 重复订单如何处理",
+          "version": "2.0",
+          "module": "import",
+          "relevant": [
+            "import-encoding"
+          ],
+          "retrieved": [
+            "import-encoding",
+            "import-v2",
+            "import-quantity"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.24,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "quantity=3件 数量非法",
+          "version": "2.0",
+          "module": "import",
+          "relevant": [
+            "import-quantity"
+          ],
+          "retrieved": [
+            "import-quantity",
+            "import-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.45,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "E2018 数量格式错误",
+          "version": "1.0",
+          "module": "import",
+          "relevant": [
+            "import-quantity"
+          ],
+          "retrieved": [
+            "import-quantity",
+            "support-process"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.28,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "E3008 大批量报表导出超时",
+          "version": "2.0",
+          "module": "export",
+          "relevant": [
+            "export-v2"
+          ],
+          "retrieved": [
+            "export-v2",
+            "export-queue",
+            "release-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.38,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "导出四万行后台任务没有下载链接",
+          "version": "2.0",
+          "module": "export",
+          "relevant": [
+            "export-v2"
+          ],
+          "retrieved": [
+            "export-v2",
+            "export-queue",
+            "release-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.38,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "E3002 报表行数超过限制",
+          "version": "1.0",
+          "module": "export",
+          "relevant": [
+            "export-v1"
+          ],
+          "retrieved": [
+            "export-v1",
+            "export-queue"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.28,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "v1.0 是否有异步导出",
+          "version": "1.0",
+          "module": "export",
+          "relevant": [
+            "export-v1"
+          ],
+          "retrieved": [
+            "export-v1",
+            "export-queue"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.24,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "E3011 下载链接过期",
+          "version": "2.0",
+          "module": "export",
+          "relevant": [
+            "export-queue"
+          ],
+          "retrieved": [
+            "export-queue",
+            "export-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.56,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "queued 和 running 是什么意思",
+          "version": "2.0",
+          "module": "export",
+          "relevant": [
+            "export-queue"
+          ],
+          "retrieved": [
+            "export-queue"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.76,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "E4030 没有 report.export 权限",
+          "version": "2.0",
+          "module": "permission",
+          "relevant": [
+            "permission-v2"
+          ],
+          "retrieved": [
+            "permission-v2",
+            "release-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.13,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "分析员能导出报表吗",
+          "version": "2.0",
+          "module": "permission",
+          "relevant": [
+            "permission-v2"
+          ],
+          "retrieved": [
+            "permission-v2",
+            "release-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.31,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "操作员导出权限不足",
+          "version": "1.0",
+          "module": "permission",
+          "relevant": [
+            "permission-v1"
+          ],
+          "retrieved": [
+            "permission-v1",
+            "account-scope",
+            "support-process"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.45,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "升级模板字段和角色权限改动",
+          "version": "2.0",
+          "module": "general",
+          "relevant": [
+            "release-v2"
+          ],
+          "retrieved": [
+            "release-v2",
+            "import-v2",
+            "permission-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.25,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "技术工单升级需要什么材料",
+          "version": "2.0",
+          "module": "general",
+          "relevant": [
+            "support-process"
+          ],
+          "retrieved": [
+            "support-process",
+            "export-queue",
+            "release-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.67,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "工单如何确认解决和沉淀知识",
+          "version": "1.0",
+          "module": "general",
+          "relevant": [
+            "support-process"
+          ],
+          "retrieved": [
+            "support-process",
+            "account-scope",
+            "permission-v1"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.23,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "为什么不能查询其他组织的任务",
+          "version": "2.0",
+          "module": "permission",
+          "relevant": [
+            "account-scope"
+          ],
+          "retrieved": [
+            "account-scope",
+            "release-v2",
+            "support-process"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.94,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "我的表格导进去以后汉字全乱了",
+          "version": "2.0",
+          "module": "import",
+          "relevant": [
+            "import-encoding"
+          ],
+          "retrieved": [],
+          "hit": false,
+          "recall": 0.0,
+          "rr": 0,
+          "duration_ms": 2.29,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "下载地址昨天能打开今天不行了",
+          "version": "2.0",
+          "module": "export",
+          "relevant": [
+            "export-queue"
+          ],
+          "retrieved": [
+            "export-queue",
+            "support-process",
+            "export-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.91,
+          "wrong_version_chunks": 0
+        }
+      ]
+    },
+    "vector": {
+      "hit_at_k": 1.0,
+      "recall_at_k": 0.9791666666666666,
+      "mrr_at_k": 0.9722222222222222,
+      "wrong_version_chunks": 0,
+      "cases": [
+        {
+          "query": "E2013 旧模板订单导入失败",
+          "version": "2.0",
+          "module": "import",
+          "relevant": [
+            "import-v2"
+          ],
+          "retrieved": [
+            "import-v2",
+            "release-v2",
+            "import-encoding"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.76,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "升级后 order_no 字段不识别",
+          "version": "2.0",
+          "module": "import",
+          "relevant": [
+            "import-v2",
+            "release-v2"
+          ],
+          "retrieved": [
+            "import-v2",
+            "support-process",
+            "import-quantity"
+          ],
+          "hit": true,
+          "recall": 0.5,
+          "rr": 1.0,
+          "duration_ms": 2.55,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "external_order_id 应该怎么填",
+          "version": "2.0",
+          "module": "import",
+          "relevant": [
+            "import-v2"
+          ],
+          "retrieved": [
+            "import-v2",
+            "import-encoding"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.68,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "E2013 缺少订单号列",
+          "version": "1.0",
+          "module": "import",
+          "relevant": [
+            "import-v1"
+          ],
+          "retrieved": [
+            "import-v1",
+            "import-encoding",
+            "import-quantity"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.9,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "v1.0 单次能导入多少行",
+          "version": "1.0",
+          "module": "import",
+          "relevant": [
+            "import-v1"
+          ],
+          "retrieved": [
+            "import-v1",
+            "import-encoding"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.66,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "CSV 上传后中文乱码",
+          "version": "2.0",
+          "module": "import",
+          "relevant": [
+            "import-encoding"
+          ],
+          "retrieved": [
+            "import-encoding"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.96,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "E2009 重复订单如何处理",
+          "version": "2.0",
+          "module": "import",
+          "relevant": [
+            "import-encoding"
+          ],
+          "retrieved": [
+            "import-encoding",
+            "import-v2",
+            "release-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.49,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "quantity=3件 数量非法",
+          "version": "2.0",
+          "module": "import",
+          "relevant": [
+            "import-quantity"
+          ],
+          "retrieved": [
+            "import-quantity",
+            "release-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.51,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "E2018 数量格式错误",
+          "version": "1.0",
+          "module": "import",
+          "relevant": [
+            "import-quantity"
+          ],
+          "retrieved": [
+            "import-quantity"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.52,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "E3008 大批量报表导出超时",
+          "version": "2.0",
+          "module": "export",
+          "relevant": [
+            "export-v2"
+          ],
+          "retrieved": [
+            "export-v2",
+            "release-v2",
+            "export-queue"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.3,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "导出四万行后台任务没有下载链接",
+          "version": "2.0",
+          "module": "export",
+          "relevant": [
+            "export-v2"
+          ],
+          "retrieved": [
+            "export-v2",
+            "export-queue",
+            "release-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.18,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "E3002 报表行数超过限制",
+          "version": "1.0",
+          "module": "export",
+          "relevant": [
+            "export-v1"
+          ],
+          "retrieved": [
+            "export-v1",
+            "support-process"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.57,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "v1.0 是否有异步导出",
+          "version": "1.0",
+          "module": "export",
+          "relevant": [
+            "export-v1"
+          ],
+          "retrieved": [
+            "export-v1",
+            "export-queue"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.31,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "E3011 下载链接过期",
+          "version": "2.0",
+          "module": "export",
+          "relevant": [
+            "export-queue"
+          ],
+          "retrieved": [
+            "export-queue",
+            "export-v2",
+            "support-process"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.37,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "queued 和 running 是什么意思",
+          "version": "2.0",
+          "module": "export",
+          "relevant": [
+            "export-queue"
+          ],
+          "retrieved": [
+            "export-queue",
+            "release-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.19,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "E4030 没有 report.export 权限",
+          "version": "2.0",
+          "module": "permission",
+          "relevant": [
+            "permission-v2"
+          ],
+          "retrieved": [
+            "permission-v2",
+            "release-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 3.6,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "分析员能导出报表吗",
+          "version": "2.0",
+          "module": "permission",
+          "relevant": [
+            "permission-v2"
+          ],
+          "retrieved": [
+            "permission-v2",
+            "release-v2",
+            "support-process"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 3.09,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "操作员导出权限不足",
+          "version": "1.0",
+          "module": "permission",
+          "relevant": [
+            "permission-v1"
+          ],
+          "retrieved": [
+            "permission-v1",
+            "support-process"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.48,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "升级模板字段和角色权限改动",
+          "version": "2.0",
+          "module": "general",
+          "relevant": [
+            "release-v2"
+          ],
+          "retrieved": [
+            "release-v2",
+            "support-process",
+            "permission-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.67,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "技术工单升级需要什么材料",
+          "version": "2.0",
+          "module": "general",
+          "relevant": [
+            "support-process"
+          ],
+          "retrieved": [
+            "support-process",
+            "import-quantity",
+            "import-encoding"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.75,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "工单如何确认解决和沉淀知识",
+          "version": "1.0",
+          "module": "general",
+          "relevant": [
+            "support-process"
+          ],
+          "retrieved": [
+            "support-process",
+            "account-scope"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.53,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "为什么不能查询其他组织的任务",
+          "version": "2.0",
+          "module": "permission",
+          "relevant": [
+            "account-scope"
+          ],
+          "retrieved": [
+            "account-scope",
+            "release-v2",
+            "permission-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 3.11,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "我的表格导进去以后汉字全乱了",
+          "version": "2.0",
+          "module": "import",
+          "relevant": [
+            "import-encoding"
+          ],
+          "retrieved": [
+            "import-encoding"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.96,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "下载地址昨天能打开今天不行了",
+          "version": "2.0",
+          "module": "export",
+          "relevant": [
+            "export-queue"
+          ],
+          "retrieved": [
+            "export-v2",
+            "support-process",
+            "export-queue"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 0.3333333333333333,
+          "duration_ms": 2.61,
+          "wrong_version_chunks": 0
+        }
+      ]
+    },
+    "hybrid": {
+      "hit_at_k": 1.0,
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "wrong_version_chunks": 0,
+      "cases": [
+        {
+          "query": "E2013 旧模板订单导入失败",
+          "version": "2.0",
+          "module": "import",
+          "relevant": [
+            "import-v2"
+          ],
+          "retrieved": [
+            "import-v2",
+            "release-v2",
+            "import-encoding"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.39,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "升级后 order_no 字段不识别",
+          "version": "2.0",
+          "module": "import",
+          "relevant": [
+            "import-v2",
+            "release-v2"
+          ],
+          "retrieved": [
+            "import-v2",
+            "release-v2",
+            "support-process"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.4,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "external_order_id 应该怎么填",
+          "version": "2.0",
+          "module": "import",
+          "relevant": [
+            "import-v2"
+          ],
+          "retrieved": [
+            "import-v2",
+            "import-encoding",
+            "release-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 3.16,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "E2013 缺少订单号列",
+          "version": "1.0",
+          "module": "import",
+          "relevant": [
+            "import-v1"
+          ],
+          "retrieved": [
+            "import-v1",
+            "import-encoding",
+            "import-quantity"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 3.2,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "v1.0 单次能导入多少行",
+          "version": "1.0",
+          "module": "import",
+          "relevant": [
+            "import-v1"
+          ],
+          "retrieved": [
+            "import-v1",
+            "import-encoding",
+            "import-quantity"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 3.21,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "CSV 上传后中文乱码",
+          "version": "2.0",
+          "module": "import",
+          "relevant": [
+            "import-encoding"
+          ],
+          "retrieved": [
+            "import-encoding",
+            "import-v2",
+            "import-quantity"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.58,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "E2009 重复订单如何处理",
+          "version": "2.0",
+          "module": "import",
+          "relevant": [
+            "import-encoding"
+          ],
+          "retrieved": [
+            "import-encoding",
+            "import-v2",
+            "import-quantity"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.83,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "quantity=3件 数量非法",
+          "version": "2.0",
+          "module": "import",
+          "relevant": [
+            "import-quantity"
+          ],
+          "retrieved": [
+            "import-quantity",
+            "import-v2",
+            "release-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 3.1,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "E2018 数量格式错误",
+          "version": "1.0",
+          "module": "import",
+          "relevant": [
+            "import-quantity"
+          ],
+          "retrieved": [
+            "import-quantity",
+            "support-process"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.65,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "E3008 大批量报表导出超时",
+          "version": "2.0",
+          "module": "export",
+          "relevant": [
+            "export-v2"
+          ],
+          "retrieved": [
+            "export-v2",
+            "export-queue",
+            "release-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.54,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "导出四万行后台任务没有下载链接",
+          "version": "2.0",
+          "module": "export",
+          "relevant": [
+            "export-v2"
+          ],
+          "retrieved": [
+            "export-v2",
+            "export-queue",
+            "release-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.76,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "E3002 报表行数超过限制",
+          "version": "1.0",
+          "module": "export",
+          "relevant": [
+            "export-v1"
+          ],
+          "retrieved": [
+            "export-v1",
+            "export-queue",
+            "support-process"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.32,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "v1.0 是否有异步导出",
+          "version": "1.0",
+          "module": "export",
+          "relevant": [
+            "export-v1"
+          ],
+          "retrieved": [
+            "export-v1",
+            "export-queue"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.53,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "E3011 下载链接过期",
+          "version": "2.0",
+          "module": "export",
+          "relevant": [
+            "export-queue"
+          ],
+          "retrieved": [
+            "export-queue",
+            "export-v2",
+            "support-process"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 3.65,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "queued 和 running 是什么意思",
+          "version": "2.0",
+          "module": "export",
+          "relevant": [
+            "export-queue"
+          ],
+          "retrieved": [
+            "export-queue",
+            "release-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 3.71,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "E4030 没有 report.export 权限",
+          "version": "2.0",
+          "module": "permission",
+          "relevant": [
+            "permission-v2"
+          ],
+          "retrieved": [
+            "permission-v2",
+            "release-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.88,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "分析员能导出报表吗",
+          "version": "2.0",
+          "module": "permission",
+          "relevant": [
+            "permission-v2"
+          ],
+          "retrieved": [
+            "permission-v2",
+            "release-v2",
+            "support-process"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.87,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "操作员导出权限不足",
+          "version": "1.0",
+          "module": "permission",
+          "relevant": [
+            "permission-v1"
+          ],
+          "retrieved": [
+            "permission-v1",
+            "support-process",
+            "account-scope"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.62,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "升级模板字段和角色权限改动",
+          "version": "2.0",
+          "module": "general",
+          "relevant": [
+            "release-v2"
+          ],
+          "retrieved": [
+            "release-v2",
+            "import-v2",
+            "permission-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 3.34,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "技术工单升级需要什么材料",
+          "version": "2.0",
+          "module": "general",
+          "relevant": [
+            "support-process"
+          ],
+          "retrieved": [
+            "support-process",
+            "release-v2",
+            "account-scope"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.58,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "工单如何确认解决和沉淀知识",
+          "version": "1.0",
+          "module": "general",
+          "relevant": [
+            "support-process"
+          ],
+          "retrieved": [
+            "support-process",
+            "account-scope",
+            "permission-v1"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.9,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "为什么不能查询其他组织的任务",
+          "version": "2.0",
+          "module": "permission",
+          "relevant": [
+            "account-scope"
+          ],
+          "retrieved": [
+            "account-scope",
+            "release-v2",
+            "permission-v2"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 3.2,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "我的表格导进去以后汉字全乱了",
+          "version": "2.0",
+          "module": "import",
+          "relevant": [
+            "import-encoding"
+          ],
+          "retrieved": [
+            "import-encoding"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.77,
+          "wrong_version_chunks": 0
+        },
+        {
+          "query": "下载地址昨天能打开今天不行了",
+          "version": "2.0",
+          "module": "export",
+          "relevant": [
+            "export-queue"
+          ],
+          "retrieved": [
+            "export-queue",
+            "export-v2",
+            "support-process"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "rr": 1.0,
+          "duration_ms": 2.52,
+          "wrong_version_chunks": 0
+        }
+      ]
+    }
+  }
+}
